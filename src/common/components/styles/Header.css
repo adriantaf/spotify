@@ -1,0 +1,78 @@
+.hd-header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  padding-left: 1.2rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.hd-link-spotify {
+  color: inherit;
+  height: 50px;
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hd-center {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-left: auto;
+}
+
+.hd-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.hd-download-app {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 20px;
+  margin-left: 12vw;
+}
+
+.hd-btn-notification {
+  background-color: transparent;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0;
+  color: rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hd-btn-profile {
+  height: 50px;
+  aspect-ratio: 1/1;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+}
+
+.hd-btn-profile:hover {
+  transform: scale(1.03);
+}
+
+.hd-btn-profile img {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}

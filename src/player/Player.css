@@ -1,0 +1,117 @@
+.rp-reproductor {
+  padding: 0.5rem;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr auto;
+}
+
+.rp-reproductor-button:focus {
+  outline: none;
+}
+.rp-reproductor-button:hover {
+  transform: scale(1.05);
+}
+.rp-reproductor-button {
+  border: none;
+  background-color: transparent;
+  color: #ddd;
+  font-size: 1.5rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rp-reproductor__cont-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.rp-reproductor__img {
+  height: 55px;
+  border-radius: 2px;
+  aspect-ratio: 1/1;
+}
+.rp-reproductor__name,
+.rp-reproductor__author {
+  margin: 0;
+  line-height: 1;
+}
+.rp-reproductor__name {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.rp-reproductor__author {
+  color: #bbb;
+  font-size: .9rem;
+}
+
+.rp-reproductor__cont-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rp-reproductor__cont-controls {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.rp-reproductor-button.toogle-play {
+  color: #f6f6f6;
+  font-size: 2rem;
+}
+.rp-reproductor-button.sm {
+  font-size: 1rem;
+}
+
+.rp-reproductor__cont-timeline {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-width: 500px;
+}
+.rp-reproductor__time {
+  color: #ddd;
+  font-size: .8rem;
+  line-height: 0;
+}
+
+
+.rp-reproductor__timeline {
+  width: 100%;
+  appearance: none; /* Standard appearance property */
+  -webkit-appearance: none; /* WebKit-based browsers */
+  background-color: #ddd;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  background: linear-gradient(to right, #ffffff var(--timeline-value, 0%), #707070 var(--timeline-value, 0%));
+}
+.rp-reproductor__timeline:hover {
+  background: linear-gradient(to right, #40bd3e var(--timeline-value, 0%), #707070 var(--timeline-value, 0%));
+}
+.rp-reproductor__timeline::-webkit-slider-thumb {
+  appearance: none; /* Standard appearance */
+  -webkit-appearance: none; /* WebKit-based browsers */
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.rp-reproductor__timeline:hover::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.rp-reproductor__others {
+  display: flex;
+  gap: 1rem;
+}
+.rp-reproductor__volume {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

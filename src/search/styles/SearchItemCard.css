@@ -1,0 +1,62 @@
+.sr-item-card {
+  display: block;
+  white-space: normal;
+  padding: calc(1rem - 5px);
+  border-radius: 4px;
+}
+.sr-item-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.sr-item-card:hover .sr-item-card__btn-play{
+  opacity: 1;
+  bottom: 15px;
+}
+.sr-item-card__cont-image {
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.sr-item-card__image {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.sr-item-card__btn-play {
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  opacity: 0;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgb(27, 219, 84);
+  font-size: 1.75rem;
+}
+.sr-item-card__btn-play:hover {
+  cursor: pointer
+}
+.sr-item-card__btn-play:focus {
+  outline: 0;
+}
+.sr-item-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+  -webkit-box-orient: vertical; /* Especifica la dirección de la caja para que sea vertical */
+  overflow: hidden; /* Oculta el texto que se desborda */
+  word-wrap: break-word;
+  text-overflow: ellipsis; /* Agrega elipsis al final del texto */
+  width: 100%; /* Limita el ancho para aplicar elipsis */
+}

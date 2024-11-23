@@ -1,0 +1,20 @@
+.sp-search-result__section {
+  margin-bottom: 1.5rem;
+}
+.sp-search-result__label {
+  padding-left: 1rem;
+}
+.sp-search-result__label h2 {
+  margin: 0;
+}
+.sp-search-result__cont-tracks {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sp-search-result__cont-generic-items {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  padding: 5px;
+}

@@ -1,0 +1,41 @@
+#app {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  padding: .5rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  gap: 0.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+#app > * {
+  border-radius: 8px;
+}
+
+.app-main {
+  grid-area: main;
+  background-color: #121212;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+.app-main > div {
+  height: 100%;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app-footer {
+  grid-area: footer;
+}

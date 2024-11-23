@@ -1,0 +1,64 @@
+.as-controls-filter {
+  position: relative;
+  border-radius: 90px;
+}
+
+.as-controls-filter__button {
+  position: absolute;
+  border: none;
+  background-color: #1f1f1f;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f3f3;
+  font-size: 1.1rem;
+}
+
+.as-controls-filter__button:hover {
+  background-color: #303030;
+  cursor: pointer;
+}
+
+.as-controls-filter__button.left {
+  left: 0;
+  -webkit-box-shadow: 20px 0px 35px 10px rgba(10, 10, 10, 1);
+  -moz-box-shadow: 20px 0px 35px 10px rgba(10, 10, 10, 1);
+  box-shadow: 20px 0px 35px 10px rgba(10, 10, 10, 1);
+}
+
+.as-controls-filter__button.right {
+  right: 0;
+  -webkit-box-shadow: -20px 0px 35px 10px rgba(10, 10, 10, 1);
+  -moz-box-shadow: -20px 0px 35px 10px rgba(10, 10, 10, 1);
+  box-shadow: -20px 0px 35px 10px rgba(10, 10, 10, 1);
+}
+
+.as-filter-list {
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  gap: .5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 90px;
+}
+
+.as-filter-list__item {
+  border-radius: 90px;
+  background-color: #2c2c2c;
+  color: #ececec;
+  font-weight: 600;
+  font-size: .9rem;
+  border: none;
+  padding: 0.4rem .8rem;
+}
+
+.as-filter-list__item.selected {
+  background-color: #fff;
+  color: #000;
+}
