@@ -11,7 +11,7 @@ export function TokenProvider({ children }) {
   // Función para obtener el token desde el backend
   async function fetchToken() {
     try {
-      const response = await fetch('http://localhost:3001/api/token', {
+      const response = await fetch('https://spotify-self-beta.vercel.app/api/token', {
         method: 'POST',
       });
 
