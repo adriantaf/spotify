@@ -12,7 +12,7 @@ export function TokenProvider({ children }) {
   async function fetchToken() {
     try {
       const response = await fetch('https://spotify-self-beta.vercel.app/api/token', {
-        method: 'POST',
+        method: 'GET',
       });
 
       if (!response.ok) {
