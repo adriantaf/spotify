@@ -1,13 +1,25 @@
-import dotenv from 'dotenv';  // Cargar variables de entorno
-import express from 'express'; // Framework Express
-import fetch from 'node-fetch'; // Hacer peticiones HTTP
+import dotenv from 'dotenv';
+import express from 'express';
+import fetch from 'node-fetch';
+import cors from 'cors';
 
-dotenv.config(); // Cargar el archivo .env
+dotenv.config({ path: './backend/.env' });
+
 const app = express();
 
 const clientID = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 const PORT = process.env.PORT || 3001;
+
+console.log('Spotify Client ID:', clientID);
+console.log('Spotify Client Secret:', clientSecret);
+
+
+// Configura CORS para permitir solicitudes desde tu frontend
+app.use(cors({
+  origin: 'http://localhost:5173', // URL de tu frontend
+  methods: ['GET', 'POST'], // Métodos permitidos
+}));
 
 // Middleware para manejar JSON
 app.use(express.json());
@@ -27,7 +39,9 @@ app.post('/api/token', async (req, res) => {
     });
 
     if (!response.ok) {
-      return res.status(response.status).json({ error: 'Error al obtener el token' });
+      const errorText = await response.text();
+      console.error('Error from Spotify API:', errorText); // Log the full error
+      return res.status(response.status).json({ error: errorText });
     }
 
     const data = await response.json();
