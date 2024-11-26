@@ -1,8 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const TokenContext = createContext();
-const clientID = '65fb4313dd73425a900cc9bbae6b9b28';
-const clientSecret = '30ddba3e8c844e85bc2a5eed7370669c';
 
 // eslint-disable-next-line react/prop-types
 export function TokenProvider({ children }) {
@@ -10,13 +8,10 @@ export function TokenProvider({ children }) {
 
   async function fetchToken() {
     try {
-      const response = await fetch('https://accounts.spotify.com/api/token', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `grant_type=client_credentials&client_id=${clientID}&client_secret=${clientSecret}`,
-      });
+      const response = await fetch('/api/getSpotifyToken'); // Llama a tu backend
+      if (!response.ok) {
+        throw new Error('Error al obtener el token del backend');
+      }
       const data = await response.json();
 
       const newToken = data.access_token;
@@ -54,7 +49,7 @@ export function useToken() {
   const context = useContext(TokenContext);
 
   if (!context) {
-    throw new Error('useToken must be used within a TokenProvider')
+    throw new Error('useToken must be used within a TokenProvider');
   }
 
   return context;
