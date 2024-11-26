@@ -1,29 +1,27 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 
-// Crear el contexto
 const TokenContext = createContext();
+const clientID = '65fb4313dd73425a900cc9bbae6b9b28';
+const clientSecret = '30ddba3e8c844e85bc2a5eed7370669c';
 
+// eslint-disable-next-line react/prop-types
 export function TokenProvider({ children }) {
   const [token, setToken] = useState('');
 
-  // Función para obtener el token desde el backend
   async function fetchToken() {
     try {
-      const response = await fetch('http://localhost:3001/api/token', {
+      const response = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `grant_type=client_credentials&client_id=${clientID}&client_secret=${clientSecret}`,
       });
-
-      if (!response.ok) {
-        throw new Error('Error al obtener el token');
-      }
-
       const data = await response.json();
+
       const newToken = data.access_token;
       const expiresIn = data.expires_in * 1000;
 
-      // Guardar el token y su fecha de expiración en localStorage
       localStorage.setItem('spotify_token', newToken);
       localStorage.setItem('spotify_token_expiry', Date.now() + expiresIn);
 
@@ -45,17 +43,18 @@ export function TokenProvider({ children }) {
   }, []);
 
   return (
-    <TokenContext.Provider value={{ token }}>
-      {children}
+    <TokenContext.Provider value={ { token } }>
+      { children }
     </TokenContext.Provider>
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useToken() {
   const context = useContext(TokenContext);
 
   if (!context) {
-    throw new Error('useToken must be used within a TokenProvider');
+    throw new Error('useToken must be used within a TokenProvider')
   }
 
   return context;
