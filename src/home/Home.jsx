@@ -1,24 +1,15 @@
 import Filter from "../common/components/Filter";
 import './styles/Home.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HeroSection from "./HeroSection";
+import data from '../lib/data.json';
 
 function Home() {
-  const [data, setData] = useState(null);
-  const [heroItems, setHeroItems] = useState([]);
+  const heroItems = data.slice(0, 8);
   const [hoverImage, setHoverImage] = useState([]);
   const ITEMS = [
     'Todo', 'Música', 'Podcast'
   ];
-
-  useEffect(() => {
-    fetch('/src/lib/data.json')
-      .then(res => res.json())
-      .then(data => {
-        setData(data);
-        setHeroItems(data.slice(0, 8));
-      });
-  }, []);
 
   return (
     <>
