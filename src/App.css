@@ -24,16 +24,16 @@ button:focus {
 .app-main {
   grid-area: main;
   background-color: #121212;
-  overflow-x: hidden;
-  overflow-y: auto;
-  white-space: nowrap;
+  overflow: hidden;
 }
 
-.app-main > div {
+.app-main__container {
   height: 100%;
   flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
+  white-space: nowrap;
+  position: relative;
 }
 
 .app-footer {

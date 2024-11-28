@@ -41,7 +41,7 @@ function Aside() {
       </section>
       <section className='as-cont-filter-list'>
         <Filter
-          items={ ['Playlists', 'Artistas', 'Albums', 'Poscast y programas'] }
+          items={ ['Playlists', 'Artistas', 'Albumes', 'Poscast y programas'] }
         />
       </section>
       <section

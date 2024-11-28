@@ -17,7 +17,7 @@ function App() {
             <Header />
             <Aside />
             <main className='app-main'>
-              <div>
+              <div className='app-main__container'>
                 <Routes>
                   <Route path="/" element={ <Home /> } />
                   <Route path="/search" element={ <SearchPage /> } />

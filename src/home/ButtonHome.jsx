@@ -1,5 +1,5 @@
 import { BsHouseDoor, BsHouseDoorFill } from "react-icons/bs";
-import './ButtonHome.css';
+import './styles/ButtonHome.css';
 import { useLocation, useNavigate } from "react-router-dom";
 
 function ButtonHome() {
