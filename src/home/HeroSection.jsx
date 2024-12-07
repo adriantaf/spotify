@@ -18,9 +18,10 @@ function HeroSection({ items, setHoverImage }) {
 
 function PlaylistHeroSection({ img, name, setHoverImage }) {
   return (
-    <article 
+    <article
       className="hm-hero__playlist"
-      onMouseEnter={() => setHoverImage(img)}
+      onMouseEnter={ () => setHoverImage(img) }
+      onMouseLeave={ () => setHoverImage(null) }
     >
       <img
         className="hm-hero__playlist__img"

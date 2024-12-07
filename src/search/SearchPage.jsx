@@ -8,13 +8,15 @@ import './styles/SearchPage.css';
 import ContainerShows from './ContainerShows.jsx';
 import ContainerEpisodes from './ContainerEpisodes.jsx';
 import ContainerTracks from './ContainerTracks.jsx';
+import ScrollView from '../common/layouts/ScrollView.jsx';
+import { BsSearch } from 'react-icons/bs';
 
 function SearchPage() {
   const { data } = useSearchResult();
   const [trackListening, setTrackListening] = useState(null);
 
-  return data && (
-    <>
+  return data ? (
+    <ScrollView>
       { data.tracks.items.length > 0 && (
         <SearchSection label={ 'Canciones' }>
           <ContainerTracks 
@@ -49,7 +51,15 @@ function SearchPage() {
           <ContainerEpisodes items={ data.episodes.items } />
         </SearchSection>
       ) }
-    </>
+    </ScrollView>
+  )
+  : (
+    <div className='sp-no-search'>
+      <div className='sp-no-search__cont'>
+        <h2>Haz una busqueda</h2>
+        <BsSearch className='sp-no-search__icon' />
+      </div>
+    </div>
   );
 }
 

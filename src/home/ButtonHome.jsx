@@ -12,7 +12,12 @@ function ButtonHome() {
   }
 
   return (
-    <button className="hm-button-home" onClick={handleClick}>
+    <button 
+    className="hm-button-home"
+    style={{
+      color: location.pathname === '/' ? '#f3f3f3' : ""
+    }}
+    onClick={handleClick}>
       { location.pathname !== '/' ? <BsHouseDoor /> : <BsHouseDoorFill />}
     </button>
   )

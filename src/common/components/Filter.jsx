@@ -13,7 +13,10 @@ function Filter({ indexSelected = null, items }) {
   }
 
   function handleClickShowRightButton() {
-    filterListRef.current.scrollTo({ left: filterListRef.current.scrollWidth, behavior: 'smooth' });
+    filterListRef.current.scrollTo({
+      left: filterListRef.current.scrollWidth,
+      behavior: 'smooth'
+    });
   }
 
   useEffect(() => {

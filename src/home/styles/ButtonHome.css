@@ -10,11 +10,12 @@
   padding: .3rem;
   border: 2px solid transparent;
   background-color: #1f1f1f;
-  color: inherit;
-  transition: 0.2s;
+  color: #b3b3b3;
+  transition: 0.3s;
 }
 .hm-button-home:hover {
   cursor: pointer;
+  color: #f3f3f3;
   transform: scale(1.05);
 }
 .hm-button-home:focus {

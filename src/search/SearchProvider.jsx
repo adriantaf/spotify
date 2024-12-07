@@ -1,8 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 
 const SearchResultContext = React.createContext(null);
 
-// eslint-disable-next-line react/prop-types
 export function SearchProvider({ children }) {
   const [data, setData] = useState(null);
 
@@ -13,7 +14,6 @@ export function SearchProvider({ children }) {
   );
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export function useSearchResult() {
   const context = React.useContext(SearchResultContext);
 

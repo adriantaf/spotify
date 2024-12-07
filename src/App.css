@@ -27,15 +27,6 @@ button:focus {
   overflow: hidden;
 }
 
-.app-main__container {
-  height: 100%;
-  flex: 1;
-  overflow-x: hidden;
-  overflow-y: auto;
-  white-space: nowrap;
-  position: relative;
-}
-
 .app-footer {
   grid-area: footer;
 }

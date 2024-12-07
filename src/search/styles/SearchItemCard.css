@@ -6,7 +6,7 @@
 }
 .sr-item-card:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  cursor: pointer;
+  cursor: normal;
 }
 .sr-item-card:hover .sr-item-card__btn-play{
   opacity: 1;
@@ -44,7 +44,7 @@
   font-size: 1.75rem;
 }
 .sr-item-card__btn-play:hover {
-  cursor: pointer
+  cursor: normal;
 }
 .sr-item-card__btn-play:focus {
   outline: 0;

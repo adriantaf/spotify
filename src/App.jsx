@@ -17,12 +17,10 @@ function App() {
             <Header />
             <Aside />
             <main className='app-main'>
-              <div className='app-main__container'>
-                <Routes>
-                  <Route path="/" element={ <Home /> } />
-                  <Route path="/search" element={ <SearchPage /> } />
-                </Routes>
-              </div>
+              <Routes>
+                <Route path="/" element={ <Home /> } />
+                <Route path="/search" element={ <SearchPage /> } />
+              </Routes>
             </main>
             <footer className='app-footer'>
               <Player />

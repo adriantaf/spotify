@@ -7,7 +7,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 function SearchBar() {
   const { token } = useToken();
-  const { setData } = useSearchResult();  // Acceder a setData del contexto
+  const { setData } = useSearchResult();
   const [search, setSearch] = useState('');
   const REGEX = /^[a-zA-Z0-9\s]+$/;
   const inputRef = useRef(null);
@@ -39,7 +39,8 @@ function SearchBar() {
     if (search && token) {
       const params = new URLSearchParams({
         query: search,
-        type: 'track,album,artist,playlist,episode,show', //track,album,artist,playlist,episode,audiobook,show
+        type: 'track,album,artist,playlist,episode,show', //track,album,artist,
+        // playlist,episode,audiobook,show
         limit: 5,
         market: 'MX',
       })
@@ -50,12 +51,12 @@ function SearchBar() {
         },
       })
         .then((response) => response.json())
-        .then((result) => setData(result))  // Actualizar el contexto con el resultado
+        .then((result) => setData(result))
         .catch((error) => console.error('Error:', error));
     } else {
       setData(null)
     }
-  }, [search, token, setData]);  // Dependencias actualizadas
+  }, [search, token, setData]);
 
   return (
     <nav className="sp-search__container">
