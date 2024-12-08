@@ -37,12 +37,12 @@ function SearchPage() {
         </SearchSection>
       ) }
       { data.playlists.items.length > 0 && (
-        <SearchSection label={ 'Playslists' }>
+        <SearchSection label={ 'Playlists' }>
           <ContainerPlaylists items={ data.playlists.items } />
         </SearchSection>
       ) }
       { data.shows.items.length > 0 && (
-        <SearchSection label={ 'Poscasts' }>
+        <SearchSection label={ 'Podcasts' }>
           <ContainerShows items={ data.shows.items } />
         </SearchSection>
       ) }

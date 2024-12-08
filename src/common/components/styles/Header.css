@@ -65,6 +65,7 @@ button:focus {
   border: none;
   background-color: #1f1f1f;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .hd-btn-profile:hover {

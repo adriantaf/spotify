@@ -7,6 +7,7 @@ import { SearchProvider } from "./search/SearchProvider.jsx";
 import Player from "./player/Player.jsx";
 import Header from "./common/components/Header";
 import Aside from "./aside/Aside.jsx";
+import Profile from './profile/Profile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Routes>
                 <Route path="/" element={ <Home /> } />
                 <Route path="/search" element={ <SearchPage /> } />
+                <Route path="/profile" element={ <Profile /> } />
               </Routes>
             </main>
             <footer className='app-footer'>

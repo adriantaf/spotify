@@ -22,7 +22,6 @@ function Home() {
 
   function handleScroll(e) {
     setScrollTop(e.target.scrollTop);
-    // console.log(refHeader.current.clientHeight)
   }
 
   useEffect(() => {
@@ -33,7 +32,8 @@ function Home() {
       market: 'MX',
     });
 
-    const url = `https://api.spotify.com/v1/search?${params.toString()}`
+    const url = `https://api.spotify.com/v1/search?${params.toString()}`;
+    
     fetch(url, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -53,10 +53,7 @@ function Home() {
           "--opacity": hoverImage ? .6 : 0,
         } }
       ></div>
-      <div
-        className="hm-cont"
-        onScroll={ handleScroll }
-      >
+      <div className="hm-cont">
         <header
           className="hm-header"
           ref={ refHeader }

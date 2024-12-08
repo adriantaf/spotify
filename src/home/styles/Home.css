@@ -36,7 +36,3 @@
   z-index: 100;
   background-color: rgba(33,41,49, var(--bg-opacity));
 }
-
-.hm-main {
-  min-height: 150vh;
-}

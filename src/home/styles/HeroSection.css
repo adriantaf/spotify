@@ -8,7 +8,7 @@
 
 .hm-hero__playlist {
   white-space: normal;
-  cursor: pointer;
+  cursor: normal;
   display: flex;
   height: 50px;
   background-color: #a7a7a72f;
@@ -71,5 +71,5 @@
 }
 
 .hm-hero__playlist__btn-play:hover {
-  cursor: pointer
+  cursor: normal;
 }
