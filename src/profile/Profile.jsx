@@ -107,7 +107,7 @@ function Profile() {
             </section>
             <section className="pf-section">
               <h2>Objetivo del proyecto</h2>
-              <p>Estoy aprendiendo React asi que este es un proyecto mas en el camino para poner en practica mis conocimientos hasta este momento</p>
+              <p>Poner en práctica mis conocimientos en React y React Router</p>
             </section>
           </main>
         </div>
